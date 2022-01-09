@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--Adding content in the head section to plan for future advanced CSS and JS functionality-->
     <head>
         <meta charset="UTF-8">
-        <title>CLC Portfolio</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width = device-width, initial-scale= 1.0">
+        <!--Clarifying Digital Portfolio here because I have paintings, drawings, interiors, and buildings
+        maybe this page will lead to other pages in the future-->
+        <title>CLC Digital Portfolio</title>
     </head>
     <body>
         <header>
-            <h1>CLC Work in Progress</h1>
+            <!--When there are more pages, make sure to index <a href="/">CLC: Work in Progress</a>-->
+            <h1>CLC: Work in Progress</h1>
+            <!--Setting up the navigation tabs below-->
+            <nav>
+                <!--unordered list-->
+                <ul>
+                    <!-- list elements to link to in the body as anchor elements-->
+                    <li>
+                        <a href="BIO">BIO</a>
+                    </li>
+                    <li>
+                        <a href="PROJECTS">PROJECTS</a>
+                    </li>
+                    <li>
+                        <a href="CONTACT">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
+        <!--Calling a large feature image a jumbotron and naming it "lens" to make a section class-->
+        <section class="lens">
+            <!--The section will have three <div> containers for BIO, PROJECTS, and CONTACT-->
+                <div class="lens-BIO">
+                    <h2>BIO</h2>
+                    <!--I know this is me, but I will get distracted with the text so here is Lorem-->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolor quam eveniet 
+                        fugit omnis ut? Itaque ipsum sapiente numquam incidunt, quam voluptates unde quia sed 
+                        dolorum temporibus ut, dignissimos nemo?
+                    </p>
+                </div>
+                <div class="lens-PROJECTS">
+                    <h2>PROJECTS</h2>
+                    <div class="PROJECT 1">
+                        <h3>Run Buddy, Inc.</h3>
+                        <div class="project-img">
+                            <img src="./assets/images/step-1.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
     </body>
 
 </html>
