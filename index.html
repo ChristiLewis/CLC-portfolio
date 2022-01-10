@@ -14,20 +14,21 @@
     <body>
         <header>
             <!--When there are more pages, make sure to index <a href="/">CLC: Work in Progress</a>-->
-            <h1>CLC: Work in Progress</h1>
+            <h1>CLC: Christi Lewis Cvijanovic'sWork in Progress</h1>
             <!--Setting up the navigation tabs below-->
             <nav>
                 <!--unordered list-->
                 <ul>
                     <!-- list elements to link to in the body as anchor elements-->
                     <li>
-                        <a href="BIO">BIO</a>
+                        <!--Add # to connect nav to body article or section-->
+                        <a href="#BIO">BIO</a>
                     </li>
                     <li>
-                        <a href="PROJECTS">PROJECTS</a>
+                        <a href="#PROJECTS">PROJECTS</a>
                     </li>
                     <li>
-                        <a href="CONTACT">CONTACT</a>
+                        <a href="#CONTACT">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -36,12 +37,13 @@
         <section class="lens">
             <img src="./assets/images/lens.jpeg" alt="An image of a digital lens fragment">
             <!--The section will have three <div> containers for BIO, PROJECTS, and CONTACT-->
-                <article class="lens-BIO">
+                <!--Add id to link to nav-->
+                <article id="BIO" class="lens-BIO">
                     <h2>BIO</h2>
                     <div class="BIO-1">
                         <h3>Places</h3>
                         <div class="bio-img">
-                            <img src="./assets/images/bio-1.svg" alt="An image of Miami Beach">
+                            <img src="./assets/images/bio-1.jpg" alt="An image of Miami Beach">
                         </div>
                     </div>
                     <div class="BIO-2">
@@ -59,49 +61,56 @@
                     <div class="BIO-3">
                         <h3>People</h3>
                         <div class="bio-img">
-                            <img src="./assets/images/bio-3.svg" alt="An image of the artists and engineers of the Bauhaus">
+                            <img src="./assets/images/bio-3.jpg" alt="An image of the artists and engineers of the Bauhaus">
                         </div>
                     </div>  
                 </article>
                 <!--Here are image placeholders to link to the future project sites-->
-                <article class="lens-PROJECTS">
+                <article id="PROJECTS" class="lens-PROJECTS">
                     <h2>PROJECTS</h2>
                     <div class="PROJECT-1">
                         <h3>Run Buddy, Inc.</h3>
                         <div class="project-img">
-                            <img src="./assets/images/project-1.svg" alt=""/>
+                            <img src="./assets/images/projects-1.jpg" alt=""/>
+                            <a href="https://christilewis.github.io/run-buddy/" alt=""></a>
                         </div>
                     </div>
                     <div class="PROJECT-2">
                         <h3>Code Refactor</h3>
                         <div class="project-img">
-                            <img src="./assets/images/project-2.svg" alt=""/>
+                            <img src="./assets/images/projects-2.jpg" alt="website and dev tools image"/>
+                            <a href="https://christilewis.github.io/Code-Refactor/" alt=""></a>
                         </div>
                     </div>
                     <div class="PROJECT-3">
                         <h3>Robot Gladiator</h3>
                         <div class="project-img">
-                            <img src="./assets/images/project-3.svg" alt="">
+                            <img src="./assets/images/project-3.svg" alt="Coming Soon">
                         </div>
                     </div>
                 </article>
                 <!--Here are image placeholders for the contact section-->
-                <article class="lens-CONTACT">
+                <article id="CONTACT" class="lens-CONTACT">
                     <h2>CONTACT</h2>
                     <div class="CONTACT-1">
                         <h3>Address</h3>
+                        <p>1881 Washington Ave. <br>
+                            Miami Beach, FL
+                        </p>
                         <div class="contact-img">
                             <img src="./assets/images/contact-1.jpg" alt="">
                         </div>
                     </div>
                     <div class="CONTACT-2">
                         <h3>Email</h3>
+                        <p>clcarchitect@gmail.com</p>
                         <div class="contact-img">
                             <img src="./assets/images/contact-2.jpg" alt="">
                         </div>
                     </div>
                     <div class="CONTACT-3">
-                        <h3>Address</h3>
+                        <h3>Phone</h3>
+                        <p>555.555.0027</p>
                         <div class="contact-img">
                             <img src="./assets/images/contact-3.jpg" alt="">
                         </div>
