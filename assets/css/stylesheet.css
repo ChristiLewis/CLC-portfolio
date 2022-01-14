@@ -2,16 +2,16 @@
 :root {
     --primary-color: #ce22c0;
     --secondary-color: #024e76;
-    --tertiary-color: #39a6b2;
+    --tertiary-color: rgb(57, 166, 178);
 }
 
 body {
-    /* Experiment results-this seems ok to keep from existing */
+    /* CLC Experiment results-this seems ok to keep from existing */
     color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Experiment results-this seems ok to keep from existing */
+/* CLC Experiment results-this seems ok to keep from existing */
 * {
     margin:0;
     padding: 0;
@@ -29,8 +29,8 @@ header {
     position: -webkit-sticky;
     position:sticky;
     top: 0;
-    /*redirect filename to match*/
-    background-image: url("../images/lens.jpeg");
+    /*redirect filename to match CLC portfolio image file initiated with a capital "I" NA for local repo-needed to fix for remote*/
+    background-image: url("../Images/lens.jpg");
     background-size: cover;
     /*Change b-p from center to 80% for 2.4.0 */
     background-position: 80%;
@@ -102,7 +102,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     width: 100%;
     padding: 40px 35px
 }
@@ -110,7 +110,7 @@ footer {
 /* Style the left <h2> element and then the right <div> container holding the <a> elements
 2.0 remove display inline for flexbox specs */
 footer h2 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 30px;
     margin: 0;
 }
@@ -138,7 +138,7 @@ additions of */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url("../images/lens.jpeg");
+    background-image: url("../Images/lens.jpg");
     /* height removed 2.0 version */
     background-size: cover;
     /*Change b-p from center to 80% for 2.4.0 */
@@ -175,7 +175,7 @@ additions of */
     /*Move border info to the top */
     border: 3px solid var(--secondary-color);
     /*  Change hex to rgb to include transparency for 2.4.0 */
-    background-color: rgba(206, 34, 192, 0.8);
+    background-color: rgba(57, 166, 178, 0.8);
     padding: 20px;
    /* width removed and replaced for 2.0 NA with flexbox */
     width: 40%;
@@ -190,6 +190,13 @@ additions of */
      /*add shadow and rounded corners for 2.4.0 */
      box-shadow: 0 0 10px rgba(0,0,0,0.5);
      border-radius: 15px;
+}
+
+/* Add header h2 style for Projects */
+.lens-PROJECTS h2 {
+    font-style: italic;
+    font-size: 55px;
+    color: var(--primary-color);
 }
 
 /* CLC-portfolio change to r-b style adding new section same as the lens-bio aka hero-cta*/
