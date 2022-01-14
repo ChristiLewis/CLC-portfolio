@@ -1,6 +1,6 @@
-/*Keeping the root to establish a color palette via variables-changing colors at will */
+/*Keeping the root for CLC to establish a color palette via variables-changing colors at will */
 :root {
-    --primary-color: #ce22c0;
+    --primary-color: #c50575;
     --secondary-color: #024e76;
     --tertiary-color: rgb(57, 166, 178);
 }
@@ -17,8 +17,8 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-/* Experiment results-this seems ok to keep from existing: apply styles to the <header>
-2.0 update-adding display flex  and justify content space between*/
+/* CLC Experiment results-this seems ok to keep from r-b: apply styles to the <header>
+keeping display flex and justify content space between*/
 header {
     display: flex;
     flex-wrap: wrap;
@@ -39,9 +39,8 @@ header {
     /*Add a high z-index to make sure new elements do not float in front of this header's sticky position */
     z-index: 9999;
 }
-/* there are two header children, h1 and nav. h1 is the name Run Buddy and nav is the nav bar 
-Update for 2.0 addedd margin and remove display inline-but I only have it in header nav ul li 
-Adding text shadow for 2.4.0*/
+/* there are two header children, h1 and nav. h1 is the title CLC:... and nav is the nav bar 
+keeping text shadow for 2.4.0*/
 header h1 {
     font-weight: bold;
     margin: 0;
