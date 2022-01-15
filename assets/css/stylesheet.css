@@ -1,8 +1,8 @@
 /*Keeping the root for CLC to establish a color palette via variables-changing colors at will */
 :root {
-    --primary-color: #c50575;
+    --primary-color: #ce22c0;
     --secondary-color: #024e76;
-    --tertiary-color: rgb(57, 166, 178);
+    --tertiary-color: #39a6b2;
 }
 
 body {
@@ -97,6 +97,7 @@ header h1 {
     color: var(--primary-color);
     margin: 0;
     display: inline;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
     
 /* Specify the style of the footer so more items can be added in the future*/
@@ -107,14 +108,6 @@ footer {
     background-color: rgba(206, 34, 192, 0.75);
     width: 100%;
     padding: 40px 35px
-}
-
-/* Style the left <h4> element and then the right <div> container holding the <a> elements
-no need for display inline with flexbox specs above */
-footer h4 {
-    color: var(--tertiary-color);
-    font-size: 30px;
-    margin: 0;
 }
 
 /* remove float right for flexbox specs *
@@ -310,7 +303,7 @@ article p {
 
 /* Below-commented-out is NA right now for CLC-portfolio, but it remains to maybe add later*/
 
-/*CLC experiment- repeating here to test the hierarchy*/
+/*CLC experiment- repeating here to test the hierarchy*
 .lens {
     display: flex;
     justify-content: center;
@@ -318,11 +311,11 @@ article p {
     background-image: url("../Images/lens.jpg");
     background-size: cover;
     background-position: 80%;
-    /*Add b-attachment fixed to match image with header section */
+    /*Add b-attachment fixed to match image with header section *
     background-attachment: fixed;
-    /* Add align-items flex-start for mediaquery */
+    /* Add align-items flex-start for mediaquery *
     align-items: flex-start;
-}
+}*/
 /* LENS STYLES END */
 
 /*CLC experiment add specs for p section*/
@@ -334,6 +327,17 @@ article p {
     margin: 0 auto;
     /* Add text-align for 2.0 flexbox specs *
     text-align: center;*/
+}
+
+/* This definition was in the middle testing it in the end*/
+article {
+    /* Remove text-align for flexbox specs */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 25px;
 }
 
 /* Keeping media query for CLC*/
@@ -363,6 +367,9 @@ article p {
 
     /*CLC-no footer div here but add it back if it becomes more complex*/
     footer h4 {
+        color: var(--tertiary-color);
+        font-size: 18px;
+        margin: 0 auto;
         text-align: center;
         width: 100%;
     }
@@ -440,6 +447,10 @@ article p {
         text-align: center;
         justify-content: center;
     }*/
+
+    .lens img {
+        width: 75%;
+    }
 
     article img {
         flex: 0 32%;
@@ -552,4 +563,15 @@ header nav ul li a:hover {
     color: var(--primary-color);
     border-radius: 15px;
     text-shadow: none;
+}
+
+/* This definition was in the middle testing it in the end*/
+article {
+    /* Remove text-align for flexbox specs */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 25px;
 }
