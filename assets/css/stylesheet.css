@@ -244,16 +244,24 @@ article p {
     max-width: 100%;
 }
 
+.CONTACT-2  {
+    padding: 0 35px 0 35px;
+}
+
 .CONTACT-2 a {
     text-decoration: none;
     color: var(--tertiary-color);
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .lens-CONTACT {
     text-align: right;
+    padding: 25px;
 }
 
-/* This is NA right now for CLC-portfolio, but it remains to maybe add later*/
+/* Below-commented-out is NA right now for CLC-portfolio, but it remains to maybe add later*/
 /*We adjusted the HTML file to give a unique class to the 
 first three input lines called form-input to style here below.*Don't forget 
 to put the* and forward slash here to re-activate-I am removing the forward slashes only to neutralize
@@ -433,7 +441,7 @@ article {
 .trainer-bio {
     /* Change padding from 35 to 25 for 2.0 flexbox specs *
     padding: 25px;
-    /* Remove float and width for 2.0 flexbox specs */
+    /* Remove float and width for 2.0 flexbox specs *
 }
 
 /*style classes for left aligned trainer articles and right aligned article element*
@@ -447,43 +455,43 @@ article {
 
 /* Styles for the plural trainers' heading, subheading and paragraph text.*
 .trainer-bio h3 {
-    /* Change font from 32 to 28 for 2.0 version */
+    /* Change font from 32 to 28 for 2.0 version *
     font-size: 28px;
-    /* Remove margin bottom for 2.0 version */
+    /* Remove margin bottom for 2.0 version *
 }
 
 .trainer-bio h4 {
     font-weight: lighter;
-    /* Change font from 26 to 22 for 2.0 version */
+    /* Change font from 26 to 22 for 2.0 version *
     font-size: 22px;
-    /* Change from 25 to 15 for 2.0 version */
+    /* Change from 25 to 15 for 2.0 version *
     margin-bottom: 15px;
 }
 
 .trainer-bio p {
     font-size: 17px;
-    /* Change from 1.3 to 1.5 for 2.0 version because it is typ but not listed in trainer-bio rules */
+    /* Change from 1.3 to 1.5 for 2.0 version because it is typ but not listed in trainer-bio rules *
     line-height: 1.5;
 }
     
 /* REACH OUT STYLES START */
 .contact {
-    /* Remove text-align for 2.0 flexbox specs */
+    /* Remove text-align for 2.0 flexbox specs *
     background: var(--secondary-color);
 }
 
-/* Assign the h2 header for this contact section its color. */
+/* Assign the h2 header for this contact section its color. *
 .contact h2 {
     color: var(--primary-color);
 }
 
 .contact-info iframe {
-    /* Remove width for 2.0 flexbox specs */
+    /* Remove width for 2.0 flexbox specs *
     height: 400px;
 }
 
 .contact-info div {
-    /* Remove all but color for 2.0 flexbox specs */
+    /* Remove all but color for 2.0 flexbox specs *
     color: white;
 }
 
@@ -495,7 +503,7 @@ article {
 .contact-info p, .contact-info address {
     margin: 20px 0;
     line-height: 1.5;
-    /*Change font from 19 to 16 for 2.0 flexbox*/
+    /*Change font from 19 to 16 for 2.0 flexbox*
     font-size: 16px;
     font-style: normal;  
 }
@@ -517,7 +525,7 @@ article {
     margin: 15px;
 }
 
-/* Contact form CSS styles added for 2.0 flexbox */
+/* Contact form CSS styles added for 2.0 flexbox *
 .contact-form input, .contact-form textarea {
     border: 1px solid var(--secondary-color);
     display: block;
@@ -527,7 +535,7 @@ article {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
-    /* Add rounded corners and pseudoclass for 2.4.0 */
+    /* Add rounded corners and pseudoclass for 2.4.0 *
     border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
 }
@@ -540,7 +548,7 @@ article {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
-    /* Add rounded corners for 2.4.0 */
+    /* Add rounded corners for 2.4.0 *
     border-radius: 10px;
 }
 
@@ -557,16 +565,16 @@ article {
     display: flex;
 }
 
-/* Adding media query test note-we removed h1 from the HTML the header is now h2*/
+/* Keeping media query for CLC*/
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;
         justify-content: center;
-        /* Adding a relative position to negate the sticky header rule for 2.4.0 with smaller screens */
+        /* Keeping a relative position to negate the sticky header rule for 2.4.0 with smaller screens */
         position: relative;
     }
 
-    header h2 {
+    header h1 {
         width: 100%;
         text-align: center;
     }
@@ -581,18 +589,35 @@ article {
         font-size: 20px;
     }
 
-    footer h2, footer div {
-        text-align: center;
+    /*CLC-no footer div here but add it back if it becomes more complex*/
+    footer h4 {
+        text-align: right;
         width: 100%;
     }
     
-    .hero-cta, .hero-form {
+    /*CLC-change .hero-cta, .hero-form to .lens or article-
+    Note if you add a form in the future, separate width and 
+    text-align center from the form bec. the form is off center.
+    CLC adding all under article-commenting out r-b for future */
+    article {
         width: 100%;
+        text-align: center;
+        flex: 0 70%;
     }
 
-    .hero-cta {
-        text-align: center;
+    article h3, a {
+        width: 80%;
     }
+
+    .lens-CONTACT {
+        text-align: center;
+        flex-direction: column;
+        flex: 0 50%;
+    }
+
+    /*.hero-cta {
+        text-align: center;
+    }*
 
     .section-title {
         width: 80%;
@@ -604,7 +629,7 @@ article {
 
     .contact-info iframe {
         flex: 1 100%;
-    }
+    }*/
 
 }
 
