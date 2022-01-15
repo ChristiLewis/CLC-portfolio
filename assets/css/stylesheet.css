@@ -39,6 +39,7 @@ header {
     /*Add a high z-index to make sure new elements do not float in front of this header's sticky position */
     z-index: 9999;
 }
+
 /* there are two header children, h1 and nav. h1 is the name, now CLC:... and nav is the nav bar 
 Addedd margin and removed display inline-but I only have it in header nav ul li 
 Adding text shadow for final*/
@@ -49,6 +50,7 @@ header h1 {
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
 /* The header also has a specific <a> tag or hyperlink so the above code 
 doesn't work unless you overide the default look for <a> tags. The text-decoration
 as none allows you to remove the hypertext color and underline. 
@@ -115,13 +117,13 @@ footer h2 {
     margin: 0;
 }
 
-/* remove float right for flexbox specs */
+/* remove float right for flexbox specs *
 footer div {
     line-height: 1.5;
     text-align: right;
 }
     
-/* Now style the <a> element inside the <div> container. */
+/* Now style the <a> element inside the <div> container. *
 footer a {
     color: var(--secondary-color);
 }
@@ -139,30 +141,30 @@ section p {
     padding-bottom: 25px;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-    /* LENS Style Start */
-/* overall declarations in 1.0 version, but position and height removed for 2.0 flexbox specs 
-additions of */    
+    
+/* LENS Style Start */
+/* overall declarations in basic version, but position and height removed for flexbox specs*/    
 .lens {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background-image: url("../images/lens.jpeg");
-    /* height removed 2.0 version */
+    /* height removed NA flexbox */
     background-size: cover;
-    /*Change b-p from center to 80% for 2.4.0 */
+    /*Change b-p from center to 80% for final */
     background-position: 80%;
     /*Add b-attachment fixed to match image with header section */
     background-attachment: fixed;
     /* Add position relative to the hero section to position the hero-form. NA with 2.0 flexbox */
-    /* Add align-items flex-start for mediaquery version 2.3.0 */
+    /* Add align-items flex-start for mediaquery version */
     align-items: flex-start;
 }
 
-/* Changed .lens-BIO and .lens-CONTACT to be DRY-kept .lens-PROJECTS as unique */
+/* Changed .lens-BIO and .lens-CONTACT to article element be DRY-kept .lens-PROJECTS as unique */
 article {
     width: 35%;
     text-align: center;
-    /*check old margin margin: 5px 0 15px 0;*/
+    /*check and note old margin margin: 5px 0 15px 0;*/
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
@@ -408,13 +410,12 @@ Here are CSS rules for repeated step elements*/
 /*CLC experiment: made .trainers class into article container.
 Next section styling for the trainers, first make an overview center text align default*/
 article {
-    /* Remove text-align for 2.0 flexbox specs */
+    /* Remove text-align for flexbox specs */
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    text-align: center;
     padding: 25px;
 }
 
@@ -474,7 +475,7 @@ article {
     line-height: 1.5;
 }
     
-/* REACH OUT STYLES START */
+/* REACH OUT STYLES START *
 .contact {
     /* Remove text-align for 2.0 flexbox specs *
     background: var(--secondary-color);
@@ -557,16 +558,17 @@ article {
 /* heart emoji fix*/
 .heart {
     color: red;
-    font-weight:normal;
+    font-weight: normal;
 }
 
-/* Adding flex-row class style for 2.0 flexbox specs */
+/* Adding flex-row class style for final */
 .flex-row {
     display: flex;
 }
 
 /* Keeping media query for CLC*/
 @media screen and (max-width: 980px) {
+    
     header {
         padding-bottom: 0;
         justify-content: center;
@@ -575,8 +577,8 @@ article {
     }
 
     header h1 {
-        width: 100%;
-        text-align: center;
+    width: 100%;
+    text-align: center;
     }
 
     header nav ul {
@@ -586,12 +588,12 @@ article {
     }
 
     header nav ul li a {
-        font-size: 20px;
+    font-size: 20px;
     }
 
     /*CLC-no footer div here but add it back if it becomes more complex*/
     footer h4 {
-        text-align: right;
+        text-align: center;
         width: 100%;
     }
     
@@ -609,62 +611,84 @@ article {
         width: 80%;
     }
 
-    .lens-CONTACT {
+    .lens-CONTACT h2, h3, p, a {
         text-align: center;
         flex-direction: column;
         flex: 0 50%;
     }
 
+    
     /*.hero-cta {
+        
         text-align: center;
+    
     }*
 
+    
     .section-title {
+        
         width: 80%;
+    
     }
 
+    
     .trainer {
+        
         flex: 0 70%;
+    
     }
 
+    
     .contact-info iframe {
+        
         flex: 1 100%;
+    
     }*/
 
+    article img {
+        flex: 1 12%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items:center;
+        margin: 0 auto;
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     section {
-        padding: 30px 15px;
+        width: 100%;
     }
 
-    .step h3 {
+    article h3, a {
         flex: 2 100%;
         text-align: center;
     }
 
-    .step-info {
+    /*.step-info {
         flex: 2 100%;
         text-align: center;
         justify-content: center;
-    }
+    }*/
 
-    .step-img {
+    article img {
         flex: 0 32%;
-        margin-right: 0;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin: 0 auto;
     }
 
-    .step-text {
+    .PROJECT-1 img {
+        width: fit-content;
+    }
+
+    article p {
         flex: 100%;
     }
    
 }
 
 @media screen and (max-width: 575px) {
-
-    .hero-form button {
+    /*Entire r-b media query commented-out*/
+    /*.hero-form button {
         width: 100%;
     }
 
@@ -690,9 +714,33 @@ article {
 
     .contact-form {
         order: 3;
+    }*/
+
+    .lens img {
+        width: 75%;
+    }
+
+    article img {
+        width: 85%;
+    }
+
+    .PROJECT-1 img {
+        width: fit-content;
+    }
+
+    article h2 {
+        font-size: 30px;
+    }
+
+    .lens-PROJECTS h2 {
+        font-size: 30px;
+    }
+
+    section {
+        width: auto;
     }
 }
-/* Adding pseudoclasses for 2.4.0 */
+/* Keeping pseudoclasses for CLC */
 header nav ul li a:hover {
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -700,7 +748,22 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
-.hero-form button:hover {
+/* Adding a psuedoclass for CLC project links*/
+.PROJECT-1 a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+.PROJECT-2 a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+/*.hero-form button:hover {
     background-color: var(--tertiary-color);
 }
 
@@ -709,7 +772,7 @@ header nav ul li a:hover {
     background: var(--tertiary-color);
 }
 
-/* Adding a pseudoclasses for buttons to change for 2.4.0 */
+/* Adding a pseudoclasses for buttons to change for 2.4.0 *
 
 .contact-form button:focus {
 
@@ -720,7 +783,7 @@ header nav ul li a:hover {
     outline: none;
 }
 
-/* Contact form CSS pseudoclas added for 2.4.0 adv. CSS aesthetics */
+/* Contact form CSS pseudoclas added for 2.4.0 adv. CSS aesthetics *
 .contact-form input, .contact-form textarea:focus {
     background-color: rgba(255,255,255, 1.0);
     outline: none;
@@ -730,17 +793,17 @@ header nav ul li a:hover {
     border-bottom: 1px solid var(--tertiary-color);
 }
 
-/* bottom border added to other children for 2.4.0 */
+/* bottom border added to other children for 2.4.0 *
 .step:not(:last-child) {
     border-bottom: 1px solid var(--tertiary-color);
-}
+}*/
 
-/* CSS styling to hide the functioning radio buttons and checkbox by making their opacity 0 */
+/* CSS styling to hide the functioning radio buttons and checkbox by making their opacity 0 *
 .checkbox-wrapper input, .radio-wrapper input {
     opacity: 0;
 } 
 
-/* CSS positioning to make sure the new buttons on top of the hidden old ones fit and thus funtion */
+/* CSS positioning to make sure the new buttons on top of the hidden old ones fit and thus funtion *
 .checkbox-wrapper label, .radio-wrapper label {
     position: relative;
     left: 10px;
@@ -748,7 +811,7 @@ header nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* Use a pseudo-element to put button styling content before the hidden HTML buttons but positioned absolutely */
+/* Use a pseudo-element to put button styling content before the hidden HTML buttons but positioned absolutely *
 .checkbox-wrapper label::before, .radio-wrapper label::before {
     content: "";
     height: 20px;
@@ -760,13 +823,13 @@ header nav ul li a:hover {
     left: -30px;
 }
 
-/* Change the above square boxes for the radio into round buttons */
+/* Change the above square boxes for the radio into round buttons *
 .radio-wrapper label::before {
     border-radius: 50%;
 }
 /* The circles and squares are larger than the default HTML, but need to be responsive.
 Add the after pseudoclass to show a change when clicked. Note for the future-there must be a better way
-to do this maybe with JavaScript? */
+to do this maybe with JavaScript? *
 .radio-wrapper label::after {
     content: "";
     width: 20px;
@@ -775,7 +838,7 @@ to do this maybe with JavaScript? */
     background: var(--secondary-color);
     background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
     position: absolute;
-    /*Find out why the position is 1px less than the before checkbox */
+    /*Find out why the position is 1px less than the before checkbox *
     left: -29px;
     top: -3px;
 }
@@ -795,7 +858,7 @@ to do this maybe with JavaScript? */
 /* Instead of this CSS rule that shows both, use the one below to keep the HTML hidden but function with the CSS style
 .checkbox-wrapper input:checked, .radio-wrapper input:checked {
     opacity: 1;
-}*/
+}*
 .checkbox-wrapper input + label::after,
 .radio-wrapper input + label::after {
     content: none;
@@ -804,7 +867,7 @@ to do this maybe with JavaScript? */
 .checkbox-wrapper input:checked + label::after,
 .radio-wrapper input:checked + label::after {
     content: "";
-}
+}*/
 
 .lens img {
     border-radius: 15px;
