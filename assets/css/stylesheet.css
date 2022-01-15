@@ -102,7 +102,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: var(--primary-color);
+    background-color: rgba(206, 34, 192, 0.75);
     width: 100%;
     padding: 40px 35px
 }
@@ -131,6 +131,14 @@ section {
     padding: 60px;
 }
 
+section p {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bolder;
+    line-height: 1.5;
+    padding-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
     /* LENS Style Start */
 /* overall declarations in 1.0 version, but position and height removed for 2.0 flexbox specs 
 additions of */    
@@ -153,7 +161,7 @@ additions of */
 /* Changed .lens-BIO and .lens-CONTACT to be DRY-kept .lens-PROJECTS as unique */
 article {
     width: 35%;
-    text-align: right;
+    text-align: center;
     /*check old margin margin: 5px 0 15px 0;*/
     margin: 3.5%;
     color: #fff;
@@ -169,21 +177,31 @@ article h2 {
     font-style: italic;
     font-size: 55px;
     color: var(--primary-color);
+    align-items:center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 /* Attempt DRY- change the font-size and margin as needed */
 article h3 {
     font-size: 24px;
-     margin: 0;
+    align-items:center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 /*CLC image styles*/
 article img {
-    flex: 2 70%;
+    flex: 1 12%;
     display: flex;
     flex-wrap: wrap;
     align-items:center;
+    margin: 0 auto;
     max-width: 90%;
+}
+
+article p {
+    max-width: 100%;
 }
 
 /*--CLC changes made-Hero-Form into PROJECTS and kept/added notes below*/
@@ -191,7 +209,7 @@ article img {
     /*Move border info to the top */
     border: 3px solid var(--secondary-color);
     /*  Change hex to rgb to include transparency for final */
-    background-color: rgba(206, 34, 192, 0.8);
+    background-color: rgba(206, 34, 192, 0.5);
     padding: 20px;
    /* width removed and replaced for flexbox */
     width: 50%;
@@ -224,6 +242,15 @@ article img {
 
 .BIO-2 img {
     max-width: 100%;
+}
+
+.CONTACT-2 a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+.lens-CONTACT {
+    text-align: right;
 }
 
 /* This is NA right now for CLC-portfolio, but it remains to maybe add later*/
@@ -346,14 +373,14 @@ Here are CSS rules for repeated step elements*/
     font-size: 18 px;
 }
 
-/* New .step-text h4 for 2.0 flexbox styling */
+/* New .step-text h4 for 2.0 flexbox styling *
 .step-text h4 {
     font-size: 26px;
     line-height: 1.5;
     color: var(--secondary-color);
 }
 
-/* Add version 2.0 flexbox styles for nested children */
+/* Add version 2.0 flexbox styles for nested children *
 .step-img {
     flex: 1 12%;
     margin-right: 20px;
@@ -370,43 +397,46 @@ Here are CSS rules for repeated step elements*/
 /*Added an HTML <span> element to break up the font size in an h3 heading.  Span styling below. */
 /* Removed .steps span for 2.0 flexbox styling */
 
-/*Next section styling for the trainers, first make an overview center text align default*/
-.trainers {
+/*CLC experiment: made .trainers class into article container.
+Next section styling for the trainers, first make an overview center text align default*/
+article {
     /* Remove text-align for 2.0 flexbox specs */
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    text-align: center;
+    padding: 25px;
 }
 
-/*Article style for the trainer section. Note the section says plural trainers and the article is singular trainer.*/
+/*Article style for the trainer section. Note the section says plural trainers and the article is singular trainer.*
 .trainer {
     /* Remove width for 2.0 flexbox specs */
-    /* Change margin from 0 auro 30px auto to 20px for 2.0 flexbox specs */
+    /* Change margin from 0 auro 30px auto to 20px for 2.0 flexbox specs *
     margin: 20px;
     background: var(--secondary-color);
     color: var(--primary-color);
     /*We must add an overflow auto property declaration because both the <img> and <div> are floated
     and the parent <article> couldn't interpret it, so showed itself. Since the parent is 0px tall, it showed nothing.*/
     /* Remove overflow for 2.0 flexbox specs */
-    /* Add a flex property for 2.0 flexbox specs */
+    /* Add a flex property for 2.0 flexbox specs *
     flex: 1
 }
-/*Style elements in the trainer article such as the <img> and <div> called trainer-bio class.*/
+/*Style elements in the trainer article such as the <img> and <div> called trainer-bio class.*
 .trainer img {
-    /* Change width from 35% to 100% for 2.0 flexbox specs */
+    /* Change width from 35% to 100% for 2.0 flexbox specs *
     width: 100%;
-    /* Remove float for 2.0 flexbox specs */
+    /* Remove float for 2.0 flexbox specs *
 }
 
 .trainer-bio {
-    /* Change padding from 35 to 25 for 2.0 flexbox specs */
+    /* Change padding from 35 to 25 for 2.0 flexbox specs *
     padding: 25px;
     /* Remove float and width for 2.0 flexbox specs */
 }
 
-/*style classes for left aligned trainer articles and right aligned article element*/
+/*style classes for left aligned trainer articles and right aligned article element*
 .text-left {
     text-align: left;
 }
@@ -415,7 +445,7 @@ Here are CSS rules for repeated step elements*/
     text-align: right;
 }
 
-/* Styles for the plural trainers' heading, subheading and paragraph text.*/
+/* Styles for the plural trainers' heading, subheading and paragraph text.*
 .trainer-bio h3 {
     /* Change font from 32 to 28 for 2.0 version */
     font-size: 28px;
