@@ -501,6 +501,20 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
+.PROJECT-3 a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+.PROJECT-4 a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
 /* This definition was in the middle testing it in the end*/
 article {
     /* Remove text-align for flexbox specs */
